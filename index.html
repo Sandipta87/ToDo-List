@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TypeScript Todo List</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="divTodoListAddNew" onclick="openNewlist();">+ Add New</div>
+        <div id="divAddForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideNewlist();">&times;</span>
+                    <div class="sectionTitle"></div>
+                    <input type="text" id="txtlistTitle">
+                    <button id="btnTodoListSaveNew" onclick="saveNewList();">Save</button>
+            </div>
+        </div>
+        <div id="divTodoList"></div>
+        <script src="code.js"></script>
+        
+    </body>
+</html>
