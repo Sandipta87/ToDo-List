@@ -74,7 +74,15 @@ function createListwithValue(listName:string, listitems:string[])
 }
 
 let listValue = getfromLocalStorage('list'); 
-showListItems(listValue);
+if(listValue) 
+	showListItems(listValue);
+else
+	{
+		let listVal = {'lists':[]};
+		addToLocalStorage('list', listVal);
+		listValue = getfromLocalStorage('list');
+		showListItems(listValue);
+	}
 
 
 
