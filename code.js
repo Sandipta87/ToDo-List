@@ -47,7 +47,14 @@ function createListwithValue(listName, listitems) {
     setlistJson(itemObj);
 }
 var listValue = getfromLocalStorage('list');
-showListItems(listValue);
+if (listValue)
+    showListItems(listValue);
+else {
+    var listVal = { 'lists': [] };
+    addToLocalStorage('list', listVal);
+    listValue = getfromLocalStorage('list');
+    showListItems(listValue);
+}
 function showListItems(listValuesJson) {
     var htmlViewforAlllists = "";
     if (listValuesJson && listValuesJson.lists) {
